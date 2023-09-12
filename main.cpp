@@ -17,6 +17,7 @@ typedef struct Timer {
     double lifeTime;    // Lifetime (seconds)
 } Timer;
 
+
 void StartTimer(Timer* timer, double lifetime) {
     timer->startTime = GetTime();
     timer->lifeTime = lifetime;
@@ -247,8 +248,6 @@ void GenerateNextFigure(int grid[CELL_HIGH][CELL_WIDE], int &currentFigure, int 
     }
 }
 
-
-
 void UpdateGrid(int grid[CELL_HIGH][CELL_WIDE]) {
     int old_grid[CELL_HIGH][CELL_WIDE] = {0};
     for (int y = 0; y < CELL_HIGH; y++) {
@@ -406,7 +405,7 @@ int main() {
     Texture tile_grid = LoadTexture("res/tile_grid.png");
 
     InitAudioDevice();
-    Sound sound = LoadSound("res/theme.ogg");
+    Sound sound = LoadSound("res/theme.ogg.mp3");
     PlaySound(sound);
 
     Timer speed;
@@ -419,7 +418,7 @@ int main() {
     GenerateNextFigure(grid, currentFigure, nextFigure);
 
     while (!WindowShouldClose()) {
-        ClearBackground(RED);
+        ClearBackground(BLACK);
 
         RenderGrid(grid, tile, tile_grid);
         //RenderDebug(grid); 
