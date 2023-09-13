@@ -442,8 +442,6 @@ int main() {
             StartTimer(&speed, SPEED);
         }
 
-
-
         ClearCompleteLine(grid);
     }
 

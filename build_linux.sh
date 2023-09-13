@@ -1,1 +1,1 @@
-g++ *.cpp -o bin/game -Iinclude -Llib -lraylib 
+g++ *.cpp -o bin/linux/tetris -Iinclude -Llib -lraylib
