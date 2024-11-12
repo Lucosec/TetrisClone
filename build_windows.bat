@@ -1,1 +1,0 @@
-g++ *.cpp -o bin/game -O2 -Wall -Wno-missing-braces -Iinclude -Llib -static-libgcc -lraylib -lopengl32 -lgdi32 -lwinmm
